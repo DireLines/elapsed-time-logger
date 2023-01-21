@@ -7,7 +7,6 @@ public static Action<string> elapsedTimeLogger(string logname) {
         watch.Stop();
         var elapsed = watch.ElapsedMilliseconds;
         Console.WriteLine(String.Format("{0}: {1} took {2} millis",logname,message,elapsed));
-        watch.Reset();
-        watch.Start();
+        watch.Restart();
     };
 }
