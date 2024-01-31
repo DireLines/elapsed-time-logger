@@ -1,6 +1,6 @@
-const elapsedTimeLogger = (namespace) => {
+const elapsedTimeLogger = (prefix) => {
   let startTimeThisStage = Date.now();
-  const prefix = namespace ? `${namespace}: ` : "";
+  const prefix = prefix ? `${prefix}: ` : "";
   return (message) => {
     const now = Date.now();
     const elapsed = now - startTimeThisStage;
